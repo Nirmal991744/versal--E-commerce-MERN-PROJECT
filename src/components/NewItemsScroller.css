@@ -1,0 +1,145 @@
+  .scroller-container {
+      overflow: hidden;
+      padding: 20px;
+      background: #eef6ff;
+    }
+
+    .scroller-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: scroll 20s linear infinite;
+    }
+
+    .scroller-container:hover .scroller-track {
+      animation-play-state: paused;
+    }
+
+    .card-wrapper {
+      width: 250px;
+      height: 250px;
+      flex-shrink: 0;
+    }
+
+    .shiny-border {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      padding: 3px;
+      background: linear-gradient(120deg, #00f, #0ff, #00f);
+      background-size: 400% 400%;
+      animation: shine 3s linear infinite;
+    }
+
+    .product-card {
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 70%;
+      object-fit: contain;
+      padding: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .product-info {
+      padding: 8px;
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #007bff;
+      margin: 2px 0;
+    }
+
+    .product-price {
+      font-size: 0.9rem;
+      color: #0040aa;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+
+.lightning-heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: #ffffff;
+  background: #0ff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #00ffff,
+    0 0 40px #00e0ff,
+    0 0 60px #00caff;
+  animation: lightning-flash 1.8s infinite ease-in-out;
+}
+
+/* Flicker/Flash for electric lightning feel */
+@keyframes lightning-flash {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #0ff,
+      0 0 10px #0ff,
+      0 0 20px #00ffff,
+      0 0 40px #00e0ff,
+      0 0 60px #00caff;
+  }
+  20% {
+    text-shadow:
+      0 0 2px #0ff,
+      0 0 4px #00f5ff,
+      0 0 10px #00e5ff;
+  }
+  40% {
+    text-shadow:
+      0 0 8px #0ff,
+      0 0 16px #00ffff,
+      0 0 32px #00e0ff;
+  }
+  60% {
+    text-shadow:
+      0 0 3px #00caff;
+  }
+  80% {
+    text-shadow:
+      0 0 10px #0ff,
+      0 0 20px #00ffff,
+      0 0 40px #00e0ff;
+  }
+}

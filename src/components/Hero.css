@@ -1,0 +1,86 @@
+.hero-carousel-container {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero-carousel-track {
+  display: flex;
+  width: 400%; /* 4 images */
+  height: 100%;
+  animation: scrollImages 16s steps(4) infinite;
+}
+
+.hero-carousel-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ✅ shows full image */
+  flex-shrink: 0;
+  background: #000; /* black background behind transparent parts */
+}
+
+/* Scrolling keyframes */
+@keyframes scrollImages {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Dark overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text content */
+.hero-content {
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
+
+.hero-content button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #007acc;
+}
