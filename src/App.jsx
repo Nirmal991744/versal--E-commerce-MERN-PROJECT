@@ -4,7 +4,8 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import WishListItems from "./components/WishListItem";
-import SignIn from "./components/Signin";
+import SignIn from "./components/SignIn"; // ✅ correct
+
 import Login from "./components/Login";
 import AddItems from "./components/AddItems";
 import Profile from "./components/Profile";
