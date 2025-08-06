@@ -14,7 +14,9 @@ function Home() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/products");
+        const res = await fetch(
+          "https://versal-e-commerce-backend.vercel.app/api/products"
+        );
         const data = await res.json();
         setProducts(data); // assuming your API sends an array of product objects
       } catch (error) {

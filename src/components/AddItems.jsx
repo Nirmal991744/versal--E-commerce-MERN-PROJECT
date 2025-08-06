@@ -27,7 +27,10 @@ function AddItems() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/products", product);
+      await axios.post(
+        "https://versal-e-commerce-backend.vercel.app/api/products",
+        product
+      );
       toast.success("Product added successfully!");
 
       // Clear the form
