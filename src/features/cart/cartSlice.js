@@ -2,7 +2,7 @@ import { createSlice , createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchProducts = createAsyncThunk("Cart/fetchProducts", async () => {
-  const res = await axios.get("https://versal-e-commerce-backend-1raj41364-nirmal991744s-projects.vercel.app/api/products");
+ const res = await axios.get("https://versal-e-commerce-backend.vercel.app/api/products");
   return res.data;
 });
 
